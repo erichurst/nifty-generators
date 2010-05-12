@@ -1,6 +1,5 @@
 !!!
 %html
-  
   %head
     %title
       = yield(:title) || "Untitled"
@@ -14,8 +13,6 @@
     #container
       - flash.each do |name, msg|
         = content_tag :div, msg, :id => "flash_#{name}"
-      
       - if show_title?
         %h1= yield(:title)
-      
       = yield
